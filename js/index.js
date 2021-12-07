@@ -35,7 +35,12 @@ window.addEventListener('load', (event) => {
         <div class="back" name="${pic.img}"></div>
         <div class="front" style="background: url(img/${pic.img}) no-repeat"></div>
       </div>
+      <div class="card turned" data-card-name="${pic.name}">
+      <div class="back" name="${pic.img}"></div>
+      <div class="front" style="background: url(img/${pic.img}) no-repeat"></div>
+    </div>
     `;
+    console.log(pic.name)
   });
 
   // Add all the divs to the HTML
@@ -45,6 +50,7 @@ window.addEventListener('load', (event) => {
   document.querySelectorAll('.card').forEach((card) => {
     card.addEventListener('click', () => {
       // TODO: write some code here
+      checkIfPair(card1, card2)
       console.log(`Card clicked: ${card}`);
     });
   });
